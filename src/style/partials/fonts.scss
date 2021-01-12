@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Droid Serif";
+  src: url("../fonts/DroidSerifRegular.eot");
+  src: url(../fonts/DroidSerifRegular.eot) format("embedded-opentype"), url(../fonts/DroidSerifRegular.woff) format("woff"), url(../fonts/DroidSerifRegular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400
+}
+
+@font-face {
+  font-family: "Droid Serif";
+  src: url(../fonts/DroidSerifItalic.eot);
+  src: url(../fonts/DroidSerifItalic.eot?#iefix) format("embedded-opentype"), url(../fonts/DroidSerifItalic.woff) format("woff"), url(../fonts/DroidSerifItalic.ttf) format("truetype");
+  font-style: italic;
+  font-weight: 400
+}
+
 
 @font-face {
   font-family: flowers-icons;

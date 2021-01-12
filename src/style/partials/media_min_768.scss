@@ -1,3 +1,9 @@
-@media all and (min-width: 768px) {
+@media all and (max-width: 768px) {
+  .modal-pack{
+    padding: 20px 15px;
+  }
+  .modal-title{
+    font-size: 20px;
+  }
 }
 
