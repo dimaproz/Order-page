@@ -1,0 +1,48 @@
+@media all and (max-width: 480px) {
+  .order-mobile-header{
+    flex-direction: column;
+    font-size: 16px;
+    a{
+      margin-bottom: 10px;
+    }
+  }
+  .get-del-price {
+    margin-left: 15px;
+    font-size: 12px;
+  }
+  .values-slider-range{
+    width: 100%;
+  }
+  .time-holder .ui-slider-horizontal{
+    margin: 20px 7px 12px 0;
+  }
+  .tabs-header{
+    padding: 0;
+  }
+  .cart-item__main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cart-item__info{
+    text-align: center;
+    margin-left: 0;
+  }
+  .cart-item__price{
+    text-align: center;
+    font-size: 26px;
+  }
+  .add-packet{
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .total{
+    align-items: center;
+  }
+  .order-products h3{
+    margin-bottom: 20px;
+  }
+  .postcard{
+    font-size: 14px;
+  }
+}
