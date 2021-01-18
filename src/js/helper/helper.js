@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    $('.textarea_hidden__title').click(function (){
+    $(document).on('click', '.textarea_hidden__title', function (){
         $(this).toggleClass('active')
         $(this).next('.textarea-wrap').slideToggle()
     })
