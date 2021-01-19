@@ -4792,7 +4792,9 @@ $( document ).ready(function() {
         $(this).next('.textarea-wrap').slideToggle()
     })
 
-    $('.tabs-header__item').on('click', function () {
+
+
+    $(document).on('click', '.tabs-header__item',function () {
         var href = $(this).data('tab');
         $(this).closest('.tabs-header')
             .find('.tabs-header__item.active').removeClass('active');
@@ -4803,18 +4805,34 @@ $( document ).ready(function() {
         $('#' + href).addClass('active');
     })
 
-    let startHour = $('#start-hour').val() ;
-    let endHour = $('#end-hour').val() ;
 
+    $('body').on('change keyup','#dist',function () {
+        var val = $(this).val();
+        var price = parseInt($(this).data('price'));
+
+        val = parseInt(val) || 1;
+
+        var sum = val * price;
+
+        $('#dist_sum').text(sum + ' руб')
+    })
+});
+
+function initDatePicker () {
     $(".hasPicker").datepicker({
         minDate: 0,
         dateFormat: 'dd-mm-yy',
         firstDay: 1,
         dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
         monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-        //   defaultDate: $('#deliveryTime').val(),
     })
+}
 
+
+
+function initSliderRange() {
+    let startHour = $('#start-hour').val() ;
+    let endHour = $('#end-hour').val() ;
     $('#datepicker_1').on("change", function () {
 
         let date = $(this).datepicker('getDate');
@@ -4822,7 +4840,6 @@ $( document ).ready(function() {
         //обновляем слайдер
         let today = new Date();
         let isToday = (today.toDateString() == date.toDateString());
-        console.log(isToday)
         if (isToday === true) {
             var hour = new Date().getHours() + 2;
             if(hour<9){ hour = 9;}
@@ -4858,7 +4875,6 @@ $( document ).ready(function() {
                 alert('Выберите дату доставки');
                 return false;
             }
-            console.log('date', date)
 
             let isToday = (today.toDateString() == date.toDateString());
             if(isToday === true){
@@ -4883,15 +4899,7 @@ $( document ).ready(function() {
             $('#end-hour').val(hourEnd)
         }
     });
+}
 
-    $('body').on('change keyup','#dist',function () {
-        var val = $(this).val();
-        var price = parseInt($(this).data('price'));
-
-        val = parseInt(val) || 1;
-
-        var sum = val * price;
-
-        $('#dist_sum').text(sum + ' руб')
-    })
-});
+initDatePicker()
+initSliderRange()

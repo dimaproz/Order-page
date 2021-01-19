@@ -94,6 +94,11 @@ input, select{
   }
 }
 
+select.error{
+  background-position: right 23px center;
+  padding-right: 50px;
+}
+
 .hasPicker.error{
   background: none;
 }
@@ -233,6 +238,7 @@ input[type="checkbox"]{
 
 .select-wrap{
   margin-bottom: 15px;
+  position: relative;
   ul{
     display: none;
   }
